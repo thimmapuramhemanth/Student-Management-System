@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage | Students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="admin-layout">
+    
+    <aside class="side-nav">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>EduManage</span>
+        </div>
+        <nav class="nav-links">
+            <a href="dashboard.html"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="index.html" class="active"><i class="fas fa-users"></i> Students</a>
+            <a href="courses.html"><i class="fas fa-book"></i> Courses</a>
+            <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <header class="top-bar">
+            <h2>Student Directory</h2>
+            <div class="avatar-small">A</div>
+        </header>
+
+        <main class="dashboard-wrapper">
+            <div class="two-col-grid">
+                <!-- Left Sidebar: Forms & Search -->
+                <div class="action-sidebar">
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <div class="card-header"><h3><i class="fas fa-search"></i> Quick Search</h3></div>
+                        <div class="form-group input-icon-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="searchName" class="form-control" placeholder="Search by name...">
+                        </div>
+                        <div class="form-group input-icon-wrapper">
+                            <i class="fas fa-filter"></i>
+                            <input type="text" id="filterCourse" class="form-control" placeholder="Filter by course...">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header"><h3 id="formTitle"><i class="fas fa-user-plus"></i> Add Student</h3></div>
+                        <form id="studentForm">
+                            <input type="hidden" id="studentId">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="e.g. Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Course *</label>
+                                <input type="text" id="course" class="form-control" placeholder="Computer Science" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" id="age" class="form-control" placeholder="20">
+                                </div>
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text" id="city" class="form-control" placeholder="New York">
+                                </div>
+                            </div>
+                            <button type="submit" id="submitBtn" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Save Student
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Main: Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-list"></i> Enrolled Students</h3>
+                        <span class="badge badge-success">Active Directory</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Student Name</th>
+                                    <th>Course</th>
+                                    <th>City</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

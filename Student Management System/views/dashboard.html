@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduManage | Dashboard</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Our Custom Styles -->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="admin-layout">
+    
+    <!-- Sidebar -->
+    <aside class="side-nav">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>EduManage</span>
+        </div>
+        <nav class="nav-links">
+            <a href="dashboard.html" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a>
+            <a href="index.html"><i class="fas fa-users"></i> Students</a>
+            <a href="#"><i class="fas fa-book"></i> Courses</a>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Top Navbar -->
+        <header class="top-bar">
+            <h2>Overview</h2>
+            <div class="user-profile">
+                <span>Admin User</span>
+                <div class="avatar-small">A</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Workspace -->
+        <main class="dashboard-wrapper">
+            
+            <!-- Statistics Row -->
+            <div class="stat-grid">
+                <div class="card stat-card">
+                    <div class="stat-icon" style="background: #e8fff3; color: #50cd89;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p>Total Students</p>
+                        <h3 id="stat-total-students">--</h3>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-icon" style="background: #e0e7ff; color: #4f46e5;">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p>Active Students</p>
+                        <h3 id="stat-active-students">--</h3>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <div class="stat-icon" style="background: #fff4de; color: #ffa800;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-details">
+                        <p>Total Courses</p>
+                        <h3 id="stat-total-courses">--</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and Tables Row -->
+            <div class="content-grid">
+                <div class="card">
+                    <div class="table-header">
+                        <h3><i class="fas fa-chart-bar" style="color:#4f46e5;"></i> Enrollment by Department</h3>
+                    </div>
+                    <div style="height: 320px; position: relative;">
+                        <canvas id="enrollmentChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="table-header">
+                        <h3><i class="fas fa-history" style="color:#ffa800;"></i> Recent Activity</h3>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Course</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-activity-body">
+                            <!-- Injected by js/dashboard.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    
+    <!-- Application Logic -->
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

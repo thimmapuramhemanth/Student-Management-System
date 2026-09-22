@@ -1,0 +1,102 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "phone": "555-0101",
+      "age": 20,
+      "course": "Computer Science",
+      "city": "New York",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "John Smith",
+      "email": "john@example.com",
+      "phone": "555-0102",
+      "age": 22,
+      "course": "Mathematics",
+      "city": "Boston",
+      "status": "Inactive"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "phone": "555-0103",
+      "age": 21,
+      "course": "Physics",
+      "city": "Chicago",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Robert Brown",
+      "email": "robert@example.com",
+      "phone": "555-0104",
+      "age": 23,
+      "course": "Computer Science",
+      "city": "Seattle",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "name": "thimmapuram hemanth",
+      "email": "thimmapuramhemanth@gmail.com",
+      "phone": "",
+      "age": 20,
+      "course": "CSE",
+      "city": "Guntur",
+      "status": "Active"
+    },
+    {
+      "name": "Ratnesh",
+      "email": "ratnesh@gmail.com",
+      "phone": "",
+      "age": 20,
+      "course": "IT",
+      "city": "Vijayawada",
+      "status": "Active",
+      "id": "6"
+    }
+  ],
+  "courses": [
+    {
+      "id": "101",
+      "title": "Computer Science",
+      "instructor": "Dr. Alan Turing",
+      "duration": "4 Years",
+      "credits": 120
+    },
+    {
+      "id": "102",
+      "title": "Mathematics",
+      "instructor": "Dr. John Nash",
+      "duration": "3 Years",
+      "credits": 90
+    },
+    {
+      "id": "103",
+      "title": "Physics",
+      "instructor": "Dr. Marie Curie",
+      "duration": "4 Years",
+      "credits": 120
+    },
+    {
+      "id": "104",
+      "title": "Data science",
+      "instructor": "Dr. Lavu",
+      "duration": "1 year",
+      "credits": 4
+    },
+    {
+      "id": "105",
+      "title": "DSA",
+      "instructor": "Dr. Rathayya",
+      "duration": "1 year",
+      "credits": 4
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>EduManage</span>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-sm">
+            <i class="fas fa-arrow-left"></i> Back to Directory
+        </a>
+    </header>
+
+    <main class="main-container profile-container" id="detailsContent">
+        <div class="profile-header card">
+            <div class="profile-avatar" id="avatar-letter">?</div>
+            <div class="profile-title">
+                <h1 id="detail-name">Loading...</h1>
+                <p id="detail-course" class="text-muted">Loading...</p>
+            </div>
+        </div>
+
+        <div class="profile-details card">
+            <h3><i class="fas fa-address-card"></i> Contact & Personal Info</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Student ID</span>
+                    <span class="info-value badge badge-gray" id="info-id">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email</span>
+                    <span class="info-value" id="info-email">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Phone Number</span>
+                    <span class="info-value" id="info-phone">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Age</span>
+                    <span class="info-value" id="info-age">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">City</span>
+                    <span class="info-value" id="info-city">--</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/details.js"></script>
+</body>
+</html>
